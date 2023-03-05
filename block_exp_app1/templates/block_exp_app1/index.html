@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .main{
+            background-color: aqua;
+            width: 50%;
+            height: 60%;
+            padding: 70px ;
+            margin: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            
+        }
+        .buttons{
+            width: 100%;
+            height: 70px;
+            margin: 10px, 5px, 10px, 5px;
+            /* background-color:rgb(75, 42, 165); */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items:center;
+            /* justify-content: center; */
+            gap: 30px, 5px;
+        }
+        .block{
+            height: 60%;
+            width: 30%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+
+            background-color: coral;    
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Welcome to Blockchain_Explorer</h1>
+        <h2>For block detail go to /block</h2>
+        <h2>For Transaction detail go to /trans</h2>
+        <div class="buttons">
+            <button onclick="block()", class="block", type="button">Block Data</button>
+            <button  onclick="trans()", class="block", type="button">Transaction Bata</button>
+        </div>
+    
+    </div>
+
+</body>
+</html>
+
+<script>
+    function block(){
+        window.location = 'http://127.0.0.1:8000//block';
+    }
+    function trans(){
+        window.location = 'http://127.0.0.1:8000//trans';
+    }
+</script>
